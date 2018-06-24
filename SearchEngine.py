@@ -1,4 +1,7 @@
 
+import math
+
+
 """
 Breakdown:
 1. create function to take in document to be searched and construct word-count dictionary
@@ -63,3 +66,32 @@ class VectorCompare:
                 conc[word] = 1
 
         return conc
+
+
+
+v = VectorCompare()
+
+documents = {
+0:"Boy have you lost your mind because i'll help you find it",
+1:"Kanye denzel harry potter NYU pokemon go water bottle fountain of youth"
+}
+
+index = {
+0: v.concordance(documents[0].lower()),
+1: v.concordance(documents[1].lower())
+}
+
+searchterm = raw_input("Enter search term: ")
+
+matches = []
+
+for i in range(len(index)):
+    relation = v.relation(v.concordance(searchterm.lower()), index[i])
+
+
+    if relation != 0:
+        matches.append((relation, documents[i][:100]))
+
+matches.sort(reverse = True)
+
+for i in matches: print(i[0], i[1])
