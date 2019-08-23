@@ -1,4 +1,3 @@
-
 import math
 
 
@@ -8,11 +7,7 @@ Breakdown:
 2. Vector space
 """
 
-
-
-
 #Vector Space: calculate the distances between two points, infinite planes
-
 
 class VectorCompare:
     def magnitude(self, concordance): #why first arg self?
@@ -49,7 +44,6 @@ class VectorCompare:
             return 0
 
     #Concordance: count of every word that occurs in a document
-
     def concordance(self, document):
 
         if type(document) != str:
@@ -66,8 +60,6 @@ class VectorCompare:
                 conc[word] = 1
 
         return conc
-
-
 
 v = VectorCompare()
 
