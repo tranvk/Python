@@ -1,13 +1,10 @@
 import math
 
-
 """
 Breakdown:
-1. create function to take in document to be searched and construct word-count dictionary
-2. Vector space
+1. Create function to take in document to be searched and construct word-count dictionary
+2. Vector space: calculate the distances between two points across infinite planes
 """
-
-#Vector Space: calculate the distances between two points, infinite planes
 
 class VectorCompare:
     def magnitude(self, concordance): 
@@ -21,8 +18,7 @@ class VectorCompare:
             total += count ** 2
 
         return math.sqrt(total)
-
-
+    
     def relation(self, concordance1, concordance2):
 
         if type(concordance1) != dict:
@@ -38,8 +34,10 @@ class VectorCompare:
 
             if concordance2.has_key(word):
                 topvalue += count*concordance2[word]
+                
         if (self.magnitude(concordance1) * self.magnitude(concordance2)) != 0:
             return topvalue/(self.magnitude(concordance1) * self.magnitude(concordance2))
+        
         else:
             return 0
 
