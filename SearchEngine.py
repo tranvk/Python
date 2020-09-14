@@ -64,8 +64,8 @@ class VectorCompare:
 v = VectorCompare()
 
 documents = {
-0:"Boy have you lost your mind because i'll help you find it",
-1:"Kanye denzel harry potter NYU pokemon go water bottle fountain of youth"
+0:"Boy girl apple shirt pants music tree flower school",
+1:"actor harry potter NYU pokemon go water bottle microsoft"
 }
 
 index = {
