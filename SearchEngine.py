@@ -10,14 +10,14 @@ Breakdown:
 #Vector Space: calculate the distances between two points, infinite planes
 
 class VectorCompare:
-    def magnitude(self, concordance): #why first arg self?
+    def magnitude(self, concordance): 
 
         if type(concordance) != dict:
             raise ValueError("Argument needs to be dictionary.")
 
         total = 0
 
-        for word, count in concordance.iteritems(): #what is iteritems
+        for word, count in concordance.iteritems(): 
             total += count ** 2
 
         return math.sqrt(total)
